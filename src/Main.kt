@@ -1,3 +1,4 @@
+import kotlin.random.Random
 
 fun add(a: Int, b: Int): Int {
     return a + b
@@ -12,16 +13,15 @@ fun div(a: Int, b: Int): Int {
 }
 
 fun brutto(a: Double): Double {
-    return 0.0
+    return a * (1.0 + 0.23)
 }
 
 fun main() {
 
-    val a: Int = 10
-    val cena = 100.0
+    var cena = 0.0
 
-    for(i in 1..50) {
-        //println("$a+$i= ${add(a,i)}")
+    for (i in 1..50) {
+        cena = Random.nextInt(1000,5000).toDouble()
         println("netto: $cena, brutto: ${brutto(cena)}")
 
     }
