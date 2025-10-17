@@ -3,6 +3,10 @@ fun add(a: Int, b: Int): Int {
     return a + b
 }
 
+fun div(a: Int, b: Int): Int {
+    return a / b
+}
+
 fun main() {
     val name = "Kotlin"
     //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
