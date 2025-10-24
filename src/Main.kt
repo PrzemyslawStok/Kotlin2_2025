@@ -60,17 +60,12 @@ fun main() {
         11.15,   // Neptun
         0.62     // Pluton
     )
-    var t = 2.5
-    println("droga: ${distance(t)}")
+
+    val t = 2.5
 
     for (i in 0..<names.size) {
-        println("Ciało niebieskie: ${names[i]} posiada przyspieszenie grawitacyjne: ")
+        println("${names[i]}: ciało po upływie ${t}s przebędzie odległość: ${distance(t,accelerations[i])}m ")
     }
 
-    t = 10.0
-    println("Na ziemi ciało po upływie 10s przebędzie odległość: ")
-
-    println(names)
-    println(accelerations)
 
 }
