@@ -47,7 +47,7 @@ fun main() {
         "Pluton"
     )
 
-    val acceleration = listOf(
+    val accelerations = listOf(
         274.0,   // Słońce
         3.7,     // Merkury
         8.87,    // Wenus
@@ -60,11 +60,17 @@ fun main() {
         11.15,   // Neptun
         0.62     // Pluton
     )
-    val t = 2.5
+    var t = 2.5
     println("droga: ${distance(t)}")
 
     for (i in 0..<names.size) {
         println("Ciało niebieskie: ${names[i]} posiada przyspieszenie grawitacyjne: ")
     }
+
+    t = 10.0
+    println("Na ziemi ciało po upływie 10s przebędzie odległość: ")
+
+    println(names)
+    println(accelerations)
 
 }
