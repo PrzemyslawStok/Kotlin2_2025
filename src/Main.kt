@@ -31,24 +31,7 @@ fun distance(t: Double, a: Double = 9.81): Double {
     return a * t * t / 2
 }
 
-class Celestial(val name: String, val accelerations: Double) {
-}
-
-fun main() {
-//    f_brutto()
-    val celestials = listOf(
-        Celestial("Słońce", 274.0),
-        Celestial("Merkury", 3.7),
-        Celestial("Wenus", 8.87),
-        Celestial("Ziemia", 9.81),
-        Celestial("Księzyc", 1.62),
-        Celestial("Mars", 3.71),
-        Celestial("Jowisz", 24.79),
-        Celestial("Saturn", 10.44),
-        Celestial("Uran", 8.87),
-        Celestial("Neptun", 11.15),
-        Celestial("Pluton", 0.62),
-    )
+fun clestials_function(){
     val names = listOf(
         "Słońce",
         "Merkury",
@@ -82,8 +65,30 @@ fun main() {
     for (i in 0..<names.size) {
         println("${names[i]}: ciało po upływie ${t}s przebędzie odległość: ${distance(t, accelerations[i])}m ")
     }
+}
+
+class Celestial(val name: String, val accelerations: Double) {
+}
+
+fun main() {
+//    f_brutto()
+    val celestials = listOf(
+        Celestial("Słońce", 274.0),
+        Celestial("Merkury", 3.7),
+        Celestial("Wenus", 8.87),
+        Celestial("Ziemia", 9.81),
+        Celestial("Księzyc", 1.62),
+        Celestial("Mars", 3.71),
+        Celestial("Jowisz", 24.79),
+        Celestial("Saturn", 10.44),
+        Celestial("Uran", 8.87),
+        Celestial("Neptun", 11.15),
+        Celestial("Pluton", 0.62),
+    )
+
 
     for (celestial in celestials) {
         println(celestial.name)
+        println(celestial.accelerations)
     }
 }
