@@ -68,6 +68,9 @@ fun clestials_function(){
 }
 
 class Celestial(val name: String, val accelerations: Double) {
+    fun distance(t: Double): Double {
+        return this.accelerations * t * t / 2
+    }
 }
 
 fun main() {
@@ -86,9 +89,9 @@ fun main() {
         Celestial("Pluton", 0.62),
     )
 
+    val t = 2.5
 
     for (celestial in celestials) {
-        println(celestial.name)
-        println(celestial.accelerations)
+        println("${celestial.name}: ciało po upływie ${t}s przebędzie odległość: ${celestial.distance(t)}m ")
     }
 }
