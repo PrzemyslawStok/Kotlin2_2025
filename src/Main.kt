@@ -70,22 +70,23 @@ fun clestials_function(){
 fun main() {
 //    f_brutto()
     val celestials = listOf(
-        Celestial("Słońce", 274.0),
-        Celestial("Merkury", 3.7),
-        Celestial("Wenus", 8.87),
-        Celestial("Ziemia", 9.81),
-        Celestial("Księzyc", 1.62),
-        Celestial("Mars", 3.71),
-        Celestial("Jowisz", 24.79),
-        Celestial("Saturn", 10.44),
-        Celestial("Uran", 8.87),
-        Celestial("Neptun", 11.15),
-        Celestial("Pluton", 0.62),
+        Celestial("Słońce", 274.0, 696000.0),
+        Celestial("Merkury", 3.7, 2439.7),
+        Celestial("Wenus", 8.87, 6051.8),
+        Celestial("Ziemia", 9.81, 6371.0),
+        Celestial("Księżyc", 1.62, 1737.4),
+        Celestial("Mars", 3.71, 3389.5),
+        Celestial("Jowisz", 24.79, 69911.0),
+        Celestial("Saturn", 10.44, 58232.0),
+        Celestial("Uran", 8.87, 25362.0),
+        Celestial("Neptun", 11.15, 24622.0),
+        Celestial("Pluton", 0.62, 1188.3),
     )
 
     val t = 2.5
 
     for (celestial in celestials) {
         println("${celestial.name}: ciało po upływie ${t}s przebędzie odległość: ${celestial.distance(t)}m ")
+        println("${celestial.name} pole powierzchni: ${celestial.surface()}")
     }
 }
