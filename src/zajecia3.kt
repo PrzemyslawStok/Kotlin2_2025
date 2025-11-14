@@ -14,8 +14,19 @@ class Student(name: String, surname: String, val idNumber: Int = 10) : Person(na
     }
 }
 
-class Lecturer(name: String, surname: String, val l_name: String) : Person(name, surname) {
+class Lecture(val name: String, val info: String) {
 
+}
+
+class Lecturer(name: String, surname: String) : Person(name, surname) {
+    val lectures = mutableListOf<Lecture>()
+    override fun toString(): String {
+        return super.toString() + ", Lecture: $lectures"
+    }
+
+    fun addLecture(name: Lecture) {
+        lectures.add(name)
+    }
 }
 
 fun main() {
@@ -24,8 +35,11 @@ fun main() {
     for (i in 1..10) {
         personList.add(Student("Jan_$i", "Kowalski_$i"))
     }
-    println(personList)
 
-    val ps = Lecturer("Jan", "Kowalski", "Lecturer")
+    val ps = Lecturer("Jan", "Kowalski")
+    println(ps)
+    ps.addLecture(Lecture("Fizyka", info = "Kolejna lekcja"))
+    println(ps)
+    ps.addLecture(Lecture("Matematyka", info = "Kolejna lekcja"))
     println(ps)
 }
