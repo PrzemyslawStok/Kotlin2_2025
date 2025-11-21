@@ -15,6 +15,14 @@ class Student(name: String, surname: String, val idNumber: Int = 10) : Person(na
 }
 
 class Lecture(val name: String, val info: String) {
+    override fun toString(): String {
+        return name
+    }
+
+    fun info(): String {
+        return this.name + " : " + this.info
+    }
+
 
 }
 
@@ -42,4 +50,7 @@ fun main() {
     println(ps)
     ps.addLecture(Lecture("Matematyka", info = "Kolejna lekcja"))
     println(ps)
+
+    val lecture = Lecture("Matematyka", "Kolejna lekcja")
+    println(lecture.info())
 }
